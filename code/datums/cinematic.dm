@@ -20,7 +20,7 @@
 
 /atom/movable/screen/cinematic
 	icon = 'icons/effects/station_explosion.dmi'
-	icon_state = "station_intact"
+	icon_state = "amogus"
 	plane = SPLASHSCREEN_PLANE
 	layer = SPLASHSCREEN_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -273,6 +273,17 @@
 	flick("intro_nuke",screen)
 	sleep(35)
 	cinematic_sound(sound('sound/items/airhorn.ogg'))
+	flick("summary_selfdes",screen) //???
+	special()
+
+/datum/cinematic/amogus
+	id = CINEMATIC_NUKE_AMOGUS
+	cleanup_time = 100
+
+/datum/cinematic/amogus/content()
+	flick("intro_nuke",screen)
+	sleep(35)
+	cinematic_sound(sound('sound/items/amogus.mp3'))
 	flick("summary_selfdes",screen) //???
 	special()
 

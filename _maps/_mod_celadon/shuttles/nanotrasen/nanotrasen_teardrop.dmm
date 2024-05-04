@@ -196,7 +196,6 @@
 /turf/open/floor/wood/ebony,
 /area/ship/hallway/central)
 "cL" = (
-/obj/structure/railing/corner,
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
@@ -926,9 +925,6 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "nh" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
 	name = "engine fuel pump"
@@ -2714,13 +2710,6 @@
 	},
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/ship/security)
-"Nn" = (
-/obj/structure/railing/corner,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/plasteel/tech/grid,
-/area/ship/engineering)
 "No" = (
 /obj/structure/chair/sofa/olive/old/right/directional/south,
 /turf/open/floor/plasteel/tech/grid,
@@ -3143,9 +3132,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "So" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
@@ -3706,7 +3692,7 @@ fa
 fa
 Nt
 yz
-Nn
+ot
 ov
 px
 tn

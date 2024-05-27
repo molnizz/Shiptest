@@ -29,7 +29,10 @@
 	if(heat_creation)
 		heat_engine()
 	var/to_use = fuel_use * (percentage / 100) * deltatime
-	return resolved_heater.consume_fuel(to_use, fuel_type) / to_use * thrust //This proc returns how much was actually burned, so let's use that and multiply it by the thrust to get all the thrust we CAN give.
+// [CELADON-EDIT] - CELADON_FIXES
+//return resolved_heater.consume_fuel(to_use, fuel_type) / to_use * thrust //This proc returns how much was actually burned, so let's use that and multiply it by the thrust to get all the thrust we CAN give. // CELADON-EDIT - ORIGINAL
+	return resolved_heater.consume_fuel(to_use, fuel_type)
+// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/fueled/return_fuel()
 	. = ..()
@@ -93,9 +96,18 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// fuel_use = 20 // CELADON-EDIT - ORIGINAL
 	// thrust = 25 // CELADON-EDIT - ORIGINAL
-	fuel_use = 30
-	thrust = 10
+	fuel_use = 20
+	thrust = 9
 	// [/CELADON-EDIT]
+// [CELADON-ADD] - CELADON_FIXES
+	engine_type = "plasma"  // Явно указываем, что это плазменный двигатель
+
+/obj/machinery/power/shuttle/engine/fueled/plasma/plasma_thrust(percentage = 100, deltatime)
+	. = ..()  // Вызов родительского метода, если он существует
+	var/obj/machinery/atmospherics/components/unary/shuttle/heater/resolved_heater = attached_heater?.resolve()
+	var/true_percentage = min(resolved_heater.return_gas() / fuel_use , percentage / 100)  //Выбираем меньшее доступное значение , запрещаем летать на пустом баке
+	return thrust * true_percentage  // Возвращаем тягу, умноженную на рассчитанный процент мощности
+// [/CELADON-ADD]
 
 /obj/machinery/power/shuttle/engine/fueled/expulsion
 	name = "expulsion thruster"
@@ -104,9 +116,9 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// fuel_use = 80 // CELADON-EDIT - ORIGINAL
 	// thrust = 15 // CELADON-EDIT - ORIGINAL
-	fuel_use = 90
-	thrust = 8
-	// [/CELADON-EDIT]
+	fuel_use = 80
+	thrust = 5
+	// [/CELADON-EDIT] - кто вообще видел эти движки в игре ???
 	//All fuel code already handled
 
 /**
@@ -124,9 +136,8 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 10 // CELADON-EDIT - ORIGINAL
 	///Amount, in kilojoules, needed for a full burn.
-	// var/power_per_burn = 50000 // CELADON-EDIT - ORIGINAL
-	thrust = 1
-	var/power_per_burn = 25000
+	thrust = 4
+	var/power_per_burn = 50000
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/bad
@@ -135,8 +146,8 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 2 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 70000 // CELADON-EDIT - ORIGINAL
-	thrust = 0.5
-	power_per_burn = 50000
+	thrust = 1
+	power_per_burn = 70000
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/premium
@@ -145,8 +156,8 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 30 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 65000 // CELADON-EDIT - ORIGINAL
-	thrust = 10
-	power_per_burn = 30000
+	thrust = 11
+	power_per_burn = 100000
 	// [/CELADON-EDIT]
 /obj/machinery/power/smes/shuttle
 	name = "electric engine precharger"

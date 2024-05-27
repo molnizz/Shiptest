@@ -3,8 +3,8 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_mag"
-	caliber = ".308 Winchester"
-	ammo_type = /obj/item/ammo_casing/win308
+	caliber = ".308"
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 25
 
 /obj/item/ammo_box/magazine/morita1/update_icon_state()
@@ -16,7 +16,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_small_mag"
-	ammo_type = /obj/item/ammo_casing/win308
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/morita1/small/update_icon_state()
@@ -28,7 +28,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_drum_mag"
-	ammo_type = /obj/item/ammo_casing/win308
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 50
 
 /obj/item/ammo_box/magazine/morita1/drum/update_icon_state()
@@ -71,3 +71,32 @@
 /obj/item/ammo_box/magazine/p16/g36drum/update_icon_state()
 	. = ..()
 	icon_state = "g36drum_mag-[!!ammo_count()]"
+
+
+/obj/item/ammo_box/magazine/usp45_standart
+	name = "\improper usp.45 magazine"
+	desc = "usp.45 magazine"
+	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
+	item_state = "usp"
+	icon_state = "usp"
+	caliber = ".45"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/usp45_standart/update_icon_state()
+	. = ..()
+	icon_state = "usp-[!!ammo_count()]"
+
+/obj/item/ammo_box/magazine/glock_standart
+	name = "\improper Glock 9mm magazine"
+	desc = "glock 9mm magazine"
+	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
+	item_state = "glock"
+	icon_state = "glock"
+	caliber = "9mm"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	max_ammo = 17
+
+/obj/item/ammo_box/magazine/glock_standart/update_icon_state()
+	. = ..()
+	icon_state = "glock-[!!ammo_count()]"

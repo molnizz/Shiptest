@@ -2725,6 +2725,9 @@
 /turf/open/floor/wood/rockplanet,
 /area/ruin/rockplanet/distillery/saloon)
 "EI" = (
+/obj/effect/turf_decal/ntlogo{
+	dir = 4
+	},
 /obj/effect/turf_decal/spline/fancy/opaque/white{
 	dir = 6
 	},
@@ -3816,6 +3819,9 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ruin/rockplanet/distillery/crew)
 "RB" = (
+/obj/effect/turf_decal/ntlogo{
+	dir = 8
+	},
 /obj/effect/turf_decal/spline/fancy/opaque/white{
 	dir = 5
 	},
@@ -4197,6 +4203,7 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ruin/rockplanet/distillery/crew)
 "Vj" = (
+/obj/effect/turf_decal/ntlogo,
 /obj/effect/turf_decal/spline/fancy/opaque/white{
 	dir = 10
 	},
@@ -4443,6 +4450,9 @@
 /turf/open/floor/pod/rockplanet,
 /area/ruin/rockplanet/distillery)
 "XV" = (
+/obj/effect/turf_decal/ntlogo{
+	dir = 4
+	},
 /obj/effect/turf_decal/spline/fancy/opaque/white{
 	dir = 6
 	},
@@ -4451,17 +4461,14 @@
 	pixel_x = -3;
 	pixel_y = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-10"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned/brushed/rockplanet,
 /area/ruin/rockplanet/distillery)
 "XY" = (

@@ -65,6 +65,25 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation)
+"aA" = (
+/obj/structure/table,
+/obj/effect/turf_decal/corner/transparent/red/three_quarters{
+	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc/auto_name/directional/west{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/sec)
 "aB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
@@ -120,15 +139,8 @@
 	},
 /area/ruin/space/has_grav/ancientstation)
 "aW" = (
-/obj/machinery/door/airlock/command{
-	dir = 4;
-	req_access_txt = null
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/patterned{
-	color = "#8a8a8a"
-	},
-/area/ruin/space/has_grav/ancientstation)
+/turf/closed/mineral/random,
+/area/template_noop)
 "ba" = (
 /obj/item/solar_assembly,
 /turf/open/floor/plating,
@@ -292,8 +304,10 @@
 /turf/open/floor/circuit/green,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "cu" = (
-/turf/closed/mineral,
-/area/space/nearstation)
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "cv" = (
 /obj/effect/turf_decal/corner/transparent/black/half{
 	dir = 1;
@@ -342,16 +356,10 @@
 	},
 /area/ruin/space/has_grav/ancientstation/engi)
 "cJ" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/auto_name/directional/east{
-	start_charge = 0
-	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/comm)
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned,
+/area/ruin/space/has_grav/ancientstation/proto)
 "cL" = (
 /obj/effect/turf_decal/corner/transparent/yellow/half{
 	dir = 1
@@ -379,6 +387,21 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/betanorth)
+"cV" = (
+/obj/structure/closet/crate,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/obj/machinery/power/apc/auto_name/directional/east{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
+/obj/item/storage/backpack/old,
+/obj/item/storage/backpack/old,
+/obj/item/storage/backpack/old,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation)
 "cW" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden/layer4{
 	dir = 6
@@ -571,9 +594,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -612,11 +635,19 @@
 /area/ruin/space/has_grav/ancientstation/atmos)
 "fh" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
+"fr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/airalarm/directional/east,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "fs" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
@@ -771,6 +802,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/engine/air,
 /area/ruin/space/has_grav/ancientstation/atmos)
 "gq" = (
@@ -801,6 +833,16 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/betamincorridor)
+"gC" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering";
+	dir = 8
+	},
+/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+	id = "ancient"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/engi)
 "gD" = (
 /obj/effect/turf_decal/industrial/warning/full,
 /obj/effect/decal/cleanable/dirt,
@@ -849,7 +891,7 @@
 	},
 /area/ruin/space/has_grav/ancientstation/sec)
 "hl" = (
-/turf/closed/mineral/bscrystal,
+/turf/closed/mineral/random,
 /area/space/nearstation)
 "hm" = (
 /obj/structure/closet/crate,
@@ -1056,6 +1098,11 @@
 /obj/item/soap,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation)
+"ik" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plasteel/patterned,
+/area/ruin/space/has_grav/ancientstation/rnd)
 "ip" = (
 /obj/effect/turf_decal/corner/transparent/yellow/three_quarters{
 	dir = 1
@@ -1176,7 +1223,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/auto_name/directional/north{
-	start_charge = 0
+	start_charge = 0;
+	req_access_txt = "1"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
@@ -1210,7 +1258,7 @@
 /area/ruin/space/has_grav/ancientstation)
 "jn" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "jp" = (
@@ -1244,9 +1292,9 @@
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "jE" = (
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm/directional/east,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -1292,6 +1340,13 @@
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/hivebot)
+"jX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/glass,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/betanorth)
 "ke" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/engineering/electrical,
@@ -1492,8 +1547,8 @@
 "lO" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -1520,7 +1575,8 @@
 /area/ruin/space/has_grav/ancientstation/sec)
 "lV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 4
+	dir = 4;
+	piping_layer = 3
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/green,
@@ -1597,7 +1653,7 @@
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "mK" = (
 /obj/structure/girder/reinforced,
-/turf/closed/mineral,
+/turf/closed/mineral/random,
 /area/template_noop)
 "mN" = (
 /obj/effect/turf_decal/corner/transparent/yellow/half{
@@ -1648,18 +1704,17 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation)
 "np" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering";
+	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/apc/auto_name/directional/south{
-	start_charge = 0
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/kitchen)
+/area/ruin/space/has_grav/ancientstation/engi)
 "nr" = (
 /obj/machinery/light/directional/west,
 /obj/effect/decal/cleanable/dirt,
@@ -1681,10 +1736,10 @@
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
 "nB" = (
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/hivebot)
 "nC" = (
@@ -1693,8 +1748,8 @@
 /area/ruin/space/has_grav/ancientstation/betamincorridor)
 "nD" = (
 /obj/structure/table/reinforced,
-/obj/item/healthanalyzer/advanced,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/healthanalyzer,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/proto)
 "nE" = (
@@ -1774,8 +1829,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -1848,8 +1903,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -1860,6 +1915,13 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
+"pe" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+	id = "ancient"
+	},
+/turf/open/space/basic,
+/area/ruin/space/has_grav/ancientstation)
 "pk" = (
 /obj/structure/table,
 /obj/effect/turf_decal/corner/transparent/blue/half,
@@ -1916,6 +1978,14 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/sec)
+"pB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/firstaid/ancient,
+/obj/structure/table,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/betanorth)
 "pD" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 1
@@ -1961,6 +2031,13 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/betanorth)
+"qf" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "qi" = (
 /obj/machinery/door/firedoor/closed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1995,13 +2072,14 @@
 	},
 /area/ruin/space/has_grav/ancientstation/betacargo)
 "qC" = (
+/obj/machinery/atmospherics/pipe/simple/general/hidden/layer4{
+	dir = 8;
+	piping_layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/science{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/general/hidden/layer4{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -2110,13 +2188,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/kitchen)
+"rM" = (
+/mob/living/simple_animal/hostile/hivebot/strong,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "rQ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/machinery/firealarm/directional/west,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -2139,19 +2222,19 @@
 	},
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "sc" = (
-/obj/structure/closet/crate,
 /obj/structure/cable{
-	icon_state = "0-1"
+	icon_state = "4-8"
 	},
-/obj/machinery/power/apc/auto_name/directional/east{
-	start_charge = 0
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
-/obj/item/storage/backpack/old,
-/obj/item/storage/backpack/old,
-/obj/item/storage/backpack/old,
+/obj/machinery/power/apc/auto_name/directional/south{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation)
+/area/ruin/space/has_grav/ancientstation/kitchen)
 "sd" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2200,6 +2283,23 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
+"so" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/auto_name/directional/north{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hydroponics)
 "sp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/green,
@@ -2445,6 +2545,14 @@
 /obj/structure/transit_tube/crossing/horizontal,
 /turf/template_noop,
 /area/template_noop)
+"ul" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/rnd)
 "uo" = (
 /obj/structure/chair{
 	dir = 8
@@ -2459,7 +2567,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/auto_name/directional/east{
-	start_charge = 0
+	start_charge = 0;
+	req_access_txt = "1"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
@@ -2480,7 +2589,8 @@
 /area/ruin/space/has_grav/ancientstation/kitchen)
 "uA" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden/layer4{
-	dir = 10
+	dir = 10;
+	piping_layer = 3
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned{
@@ -2489,8 +2599,7 @@
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "uC" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	req_access_txt = null
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned{
@@ -2638,6 +2747,13 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/engi)
+"wi" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/engi)
 "wp" = (
 /obj/effect/turf_decal/industrial/warning/full,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -2652,6 +2768,11 @@
 /obj/structure/sign/departments/medbay/alt,
 /turf/closed/wall/rust,
 /area/ruin/space/has_grav/ancientstation/engi)
+"wt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/rnd/server,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "wu" = (
 /obj/machinery/computer{
 	dir = 1;
@@ -2833,7 +2954,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "ys" = (
@@ -2958,8 +3079,8 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3079,7 +3200,7 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/betamincorridor)
 "Ae" = (
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3088,8 +3209,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/machinery/light/directional/south,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3124,6 +3245,18 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/betanorth)
+"Ap" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/auto_name/directional/east{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/comm)
 "Aq" = (
 /turf/closed/wall/rust,
 /area/ruin/space/has_grav/ancientstation/atmos)
@@ -3170,6 +3303,10 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/comm)
+"AE" = (
+/obj/item/toy/plush/slimeplushie,
+/turf/open/floor/plating/asteroid,
+/area/template_noop)
 "AO" = (
 /obj/machinery/door/airlock/science{
 	dir = 4
@@ -3294,7 +3431,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3312,6 +3449,13 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
+"BU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/human,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/comm)
 "BV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/gibs/up,
@@ -3459,7 +3603,8 @@
 	pixel_y = 1
 	},
 /obj/machinery/power/apc/auto_name/directional/north{
-	start_charge = 0
+	start_charge = 0;
+	req_access_txt = "1"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -3540,21 +3685,10 @@
 	},
 /area/ruin/space/has_grav/ancientstation/comm)
 "DQ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/auto_name/directional/north{
-	start_charge = 0
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/hydroponics)
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "DS" = (
 /obj/effect/turf_decal/industrial/warning/corner,
 /obj/effect/turf_decal/industrial/warning/corner{
@@ -3573,10 +3707,10 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3648,11 +3782,17 @@
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
 "EQ" = (
-/obj/effect/turf_decal/corner/transparent/yellow/three_quarters{
-	dir = 4
+/obj/effect/turf_decal/corner/transparent/yellow/three_quarters,
+/obj/structure/cable{
+	icon_state = "0-1"
 	},
-/obj/machinery/computer,
+/obj/machinery/power/apc/auto_name/directional/east{
+	start_charge = 0;
+	req_access_txt = "1"
+	},
+/obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/cable_coil/red,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -3842,6 +3982,11 @@
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
+"Gp" = (
+/obj/item/solar_assembly,
+/obj/item/electronics/tracker,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/betaengi)
 "Gr" = (
 /obj/structure/transit_tube/station/reverse/flipped{
 	dir = 1
@@ -3908,20 +4053,13 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "GR" = (
-/obj/effect/turf_decal/corner/transparent/yellow/three_quarters,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
-/obj/machinery/power/apc/auto_name/directional/east{
-	start_charge = 0
-	},
-/obj/structure/rack,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/cable_coil/red,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
-/area/ruin/space/has_grav/ancientstation/engi)
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "Hb" = (
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /obj/effect/decal/cleanable/dirt,
@@ -3959,7 +4097,7 @@
 /area/ruin/space/has_grav/ancientstation/rnd)
 "Hl" = (
 /obj/item/stack/sheet/plasteel,
-/turf/closed/mineral,
+/turf/closed/mineral/random,
 /area/template_noop)
 "Ho" = (
 /obj/item/stack/ore/iron,
@@ -3983,8 +4121,8 @@
 /area/ruin/space/has_grav/ancientstation/betamincorridor)
 "Ht" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -4005,6 +4143,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation)
+"HL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "HN" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -4036,6 +4184,18 @@
 /obj/machinery/power/solar,
 /turf/open/floor/plating,
 /area/template_noop)
+"Ia" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/engi)
 "Ic" = (
 /obj/effect/turf_decal/corner/transparent/red/half,
 /obj/structure/rack,
@@ -4122,8 +4282,7 @@
 /area/ruin/space/has_grav/ancientstation/rnd)
 "IB" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	req_access_txt = null
+	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4208,6 +4367,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/proto)
+"Ja" = (
+/obj/machinery/door/airlock/command,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/comm)
 "Jb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4293,6 +4460,10 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/engi)
+"JQ" = (
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "JR" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -4401,23 +4572,14 @@
 	},
 /area/ruin/space/has_grav/ancientstation/betanorth)
 "Kx" = (
-/obj/structure/table,
-/obj/effect/turf_decal/corner/transparent/red/three_quarters{
-	dir = 4
-	},
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
+	icon_state = "4-8"
 	},
-/obj/machinery/power/apc/auto_name/directional/west{
-	start_charge = 0
-	},
-/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
-/area/ruin/space/has_grav/ancientstation/sec)
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "KA" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4448,21 +4610,25 @@
 	},
 /area/ruin/space/has_grav/ancientstation/betanorth)
 "KK" = (
-/obj/machinery/door/airlock/command,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/comm)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "KN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/hivebot)
 "KO" = (
 /obj/machinery/door/firedoor,
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -4508,9 +4674,14 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
 "Lm" = (
-/obj/effect/decal/remains/human,
-/turf/template_noop,
-/area/template_noop)
+/obj/machinery/door/airlock/command{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation)
 "Lq" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
@@ -4567,6 +4738,13 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation)
+"LW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/salvageable/server,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/rnd)
 "LX" = (
 /obj/item/stack/cable_coil/red,
 /turf/open/floor/plating,
@@ -4632,7 +4810,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/mob/living/simple_animal/hostile/hivebot,
+/mob/living/simple_animal/hostile/hivebot/range,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -4650,14 +4828,17 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/comm)
-"ME" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering";
-	req_access_txt = "10";
-	dir = 8
+"MB" = (
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
 	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
+"ME" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/engi)
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "MG" = (
 /obj/structure/sign/poster/elysium/random,
 /turf/closed/wall/rust,
@@ -4750,6 +4931,12 @@
 /obj/machinery/atmospherics/pipe/simple/general/hidden/layer4,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/atmos)
+"NF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "NI" = (
 /obj/effect/turf_decal/corner/transparent/white/diagonal{
 	color = "#5e5e5e"
@@ -4781,9 +4968,9 @@
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
 "NS" = (
-/mob/living/simple_animal/hostile/hivebot,
 /obj/machinery/firealarm/directional/south,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -4867,21 +5054,21 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
 "OB" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering";
-	req_access_txt = "10";
-	dir = 8
-	},
-/obj/machinery/door/firedoor,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/engi)
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
 "OG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/rnd)
+"OI" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -5083,8 +5270,15 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/hivebot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/thetacorridor)
+"QD" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/strong,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -5114,6 +5308,13 @@
 /obj/item/electronics/apc,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
+"QO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/roller,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/betanorth)
 "QR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
@@ -5346,6 +5547,14 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
+"Sl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/drip,
+/mob/living/simple_animal/hostile/hivebot/range,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/rnd)
 "Sp" = (
 /obj/effect/turf_decal/corner/transparent/white{
 	dir = 2;
@@ -5440,7 +5649,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc/auto_name/directional/north{
-	start_charge = 0
+	start_charge = 0;
+	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
@@ -5541,15 +5751,9 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/betanorth)
 "TC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/kirbyplants/dead,
-/obj/structure/sign/departments/science{
-	pixel_y = -32
-	},
-/turf/open/floor/plasteel/patterned{
-	color = "#8a8a8a"
-	},
-/area/ruin/space/has_grav/ancientstation)
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/betaengi)
 "TG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
@@ -5754,6 +5958,10 @@
 /obj/structure/door_assembly/door_assembly_mhatch,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/betanorth)
+"VM" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid,
+/area/template_noop)
 "VV" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5916,6 +6124,13 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation)
+"Xr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/circuitboard/machine/sleeper,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation/betanorth)
 "Xz" = (
 /obj/structure/sign/poster/elysium/random,
 /turf/closed/wall/rust,
@@ -5960,15 +6175,20 @@
 	},
 /area/ruin/space/has_grav/ancientstation/sec)
 "XP" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering";
-	req_access_txt = "10";
-	dir = 8
+/obj/effect/turf_decal/corner/transparent/yellow/three_quarters{
+	dir = 4
 	},
-/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
-	id = "ancient"
+/obj/machinery/computer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/card/id/elysium{
+	name = "Engineering Middle Access ID";
+	req_access_txt = "1";
+	req_access = "1";
+	access_txt = "1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
 /area/ruin/space/has_grav/ancientstation/engi)
 "XR" = (
 /obj/structure/lattice/catwalk,
@@ -6573,9 +6793,9 @@ MI
 MI
 iO
 iO
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -6622,9 +6842,9 @@ tO
 yW
 AY
 xP
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -6671,7 +6891,7 @@ Ir
 QH
 Fk
 xP
-SM
+aW
 iO
 iO
 tO
@@ -6772,10 +6992,10 @@ tO
 tO
 tO
 iO
-SM
-SM
-SM
-SM
+aW
+aW
+aW
+aW
 tO
 tO
 tO
@@ -6819,12 +7039,12 @@ tO
 tO
 tO
 tO
-SM
-SM
+aW
+aW
 ZV
 ZV
-SM
-SM
+aW
+aW
 tO
 tO
 tO
@@ -6867,13 +7087,13 @@ tO
 tO
 tO
 tO
-SM
+aW
 ZV
 ZV
 ZV
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -6915,14 +7135,14 @@ tO
 tO
 tO
 tO
-SM
+aW
 ZV
 ZV
 ZV
 ZV
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -6963,14 +7183,14 @@ mE
 mE
 mE
 mE
-SM
-SM
+aW
+aW
 ZV
 ZV
 ZV
-SM
-SM
-SM
+aW
+aW
+aW
 uN
 tO
 tO
@@ -7012,13 +7232,13 @@ qB
 Qa
 hX
 ap
-SM
-SM
+aW
+aW
 ZV
 ZV
 ZV
-SM
-SM
+aW
+aW
 iO
 tO
 tO
@@ -7060,13 +7280,13 @@ vS
 YZ
 oD
 Qa
-SM
-SM
-SM
-SM
-SM
-SM
-SM
+aW
+aW
+aW
+aW
+aW
+aW
+aW
 LS
 tO
 tO
@@ -7109,11 +7329,11 @@ gH
 JB
 ia
 Qa
-SM
-SM
-SM
-SM
-SM
+aW
+aW
+aW
+aW
+aW
 iO
 tO
 tO
@@ -7159,8 +7379,8 @@ mE
 WA
 Nk
 LS
-SM
-SM
+aW
+aW
 xP
 iO
 tO
@@ -7446,7 +7666,7 @@ tO
 tO
 tO
 iO
-SM
+aW
 tO
 tO
 mX
@@ -7493,9 +7713,9 @@ iO
 tO
 tO
 tO
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -7541,9 +7761,9 @@ tO
 tO
 tO
 iO
-SM
+aW
 ZV
-SM
+aW
 tO
 tO
 tO
@@ -7588,11 +7808,11 @@ lD
 iO
 tO
 tO
-SM
-SM
+aW
+aW
 ZV
-SM
-SM
+aW
+aW
 tO
 tO
 tO
@@ -7637,10 +7857,10 @@ sv
 lD
 iO
 iO
-SM
-SM
-SM
-SM
+aW
+aW
+aW
+aW
 tO
 tO
 tO
@@ -7682,12 +7902,12 @@ ic
 lD
 wy
 bu
-wy
+Xr
 lD
 iO
 iO
 iO
-SM
+aW
 iO
 iO
 iO
@@ -7727,10 +7947,10 @@ lH
 SL
 kA
 lH
-wy
-wy
+pB
+QO
 bu
-wy
+jX
 es
 tO
 tO
@@ -7864,9 +8084,9 @@ tO
 tO
 tO
 tO
-SM
-SM
-SM
+aW
+aW
+aW
 Iz
 wy
 Wi
@@ -7911,10 +8131,10 @@ tO
 tO
 tO
 tO
-SM
+aW
 ZV
 ZV
-SM
+aW
 lH
 lH
 uC
@@ -7960,16 +8180,16 @@ tO
 tO
 tO
 tO
-SM
-SM
-SM
+aW
+aW
+aW
 lH
 wy
 LZ
 zy
 VD
 bm
-bm
+TC
 bm
 jI
 jI
@@ -8009,7 +8229,7 @@ tO
 tO
 iO
 tO
-SM
+aW
 tO
 lH
 UK
@@ -8019,7 +8239,7 @@ VD
 bm
 iO
 xP
-ba
+Gp
 bm
 ir
 Fm
@@ -8326,8 +8546,8 @@ tO
 iO
 tO
 Or
-SM
-SM
+aW
+aW
 tO
 tO
 tO
@@ -8372,11 +8592,11 @@ tO
 tO
 tO
 uN
-SM
-SM
+aW
+aW
 ZV
 ZV
-SM
+aW
 tO
 tO
 tO
@@ -8420,11 +8640,11 @@ tO
 tO
 tO
 iO
-SM
-SM
+aW
+aW
 ZV
 ZV
-SM
+aW
 tO
 tO
 tO
@@ -8469,9 +8689,9 @@ tO
 iO
 tO
 tO
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 tO
 tO
@@ -8588,7 +8808,7 @@ tO
 tO
 tO
 tO
-tY
+rq
 tO
 tO
 tO
@@ -8597,7 +8817,7 @@ tO
 tO
 tO
 md
-Ow
+Ia
 md
 tO
 tO
@@ -8688,17 +8908,17 @@ tY
 tO
 tO
 tO
-qv
-qv
-qv
+iO
+tO
+tO
+tO
 md
+NA
 md
-Ow
-md
-md
-qv
-qv
-qv
+tO
+tO
+tO
+iO
 tO
 tO
 tO
@@ -8732,12 +8952,60 @@ tO
 tO
 tO
 tO
+tY
+tO
+tO
+tO
+qv
+qv
+qv
+md
+md
+Ow
+md
+md
+qv
+qv
+qv
+tO
+tO
+tO
+iO
+tO
+tO
+tO
+tO
+iO
+tO
+tO
+tO
+tO
+tO
+tO
+tO
+tO
+tO
+"}
+(54,1,1) = {"
+tO
+tO
+tO
+tO
+tO
+tO
+tO
+iO
+tO
+tO
+tO
+tO
+tO
 rq
 tO
 tO
 tO
 qv
-EQ
+XP
 XJ
 SN
 SN
@@ -8766,7 +9034,7 @@ tO
 tO
 tO
 "}
-(54,1,1) = {"
+(55,1,1) = {"
 tO
 tO
 tO
@@ -8814,7 +9082,7 @@ tO
 tO
 tO
 "}
-(55,1,1) = {"
+(56,1,1) = {"
 tO
 tO
 tO
@@ -8862,7 +9130,7 @@ tO
 tO
 tO
 "}
-(56,1,1) = {"
+(57,1,1) = {"
 tO
 tO
 tO
@@ -8910,7 +9178,7 @@ tO
 tO
 tO
 "}
-(57,1,1) = {"
+(58,1,1) = {"
 tO
 tO
 tO
@@ -8938,7 +9206,7 @@ eG
 ht
 hY
 wh
-GR
+EQ
 qv
 dL
 Ly
@@ -8958,7 +9226,7 @@ tO
 tO
 tO
 "}
-(58,1,1) = {"
+(59,1,1) = {"
 tO
 tO
 tO
@@ -8973,23 +9241,23 @@ LI
 LI
 LI
 WW
-aW
-UZ
+Lm
+pe
 ws
 qv
 qv
 qv
 qv
-ME
+wi
 Qj
-XP
+gC
 qv
 qv
 Xz
 qv
 qv
 qv
-OB
+np
 qv
 qv
 LI
@@ -9006,7 +9274,7 @@ tO
 tO
 tO
 "}
-(59,1,1) = {"
+(60,1,1) = {"
 tO
 tO
 tO
@@ -9054,14 +9322,14 @@ tO
 tO
 tO
 "}
-(60,1,1) = {"
+(61,1,1) = {"
 tO
 tO
 tO
 tO
 tO
 LI
-cJ
+Ap
 ZG
 ZG
 ZG
@@ -9092,7 +9360,7 @@ cb
 Ou
 QL
 kZ
-sc
+cV
 LI
 tO
 tO
@@ -9102,7 +9370,7 @@ tO
 tO
 tO
 "}
-(61,1,1) = {"
+(62,1,1) = {"
 tO
 tO
 tO
@@ -9150,12 +9418,12 @@ tO
 tO
 tO
 "}
-(62,1,1) = {"
+(63,1,1) = {"
 tO
 tO
 tO
 qy
-qy
+gE
 JW
 GA
 wC
@@ -9198,11 +9466,11 @@ tO
 tO
 tO
 "}
-(63,1,1) = {"
+(64,1,1) = {"
 tO
 tO
 tO
-gE
+SR
 JW
 My
 CZ
@@ -9246,11 +9514,11 @@ tO
 tO
 tO
 "}
-(64,1,1) = {"
+(65,1,1) = {"
 tO
 tO
 tO
-SR
+ou
 Mj
 Pt
 Pt
@@ -9269,7 +9537,7 @@ Tc
 oI
 Tx
 AT
-DQ
+so
 nP
 FU
 DC
@@ -9294,11 +9562,11 @@ tO
 tO
 tO
 "}
-(65,1,1) = {"
+(66,1,1) = {"
 tO
 tO
 tO
-ou
+Rk
 Pa
 HN
 Pt
@@ -9342,11 +9610,11 @@ tO
 tO
 tO
 "}
-(66,1,1) = {"
+(67,1,1) = {"
 tO
 tO
 tO
-Rk
+ou
 FT
 Qo
 hs
@@ -9355,7 +9623,7 @@ WK
 IN
 PZ
 PZ
-KK
+Ja
 NW
 WH
 ee
@@ -9390,14 +9658,14 @@ tO
 tO
 tO
 "}
-(67,1,1) = {"
+(68,1,1) = {"
 tO
 tO
-Lm
+tO
 ou
 CY
 zl
-Pt
+BU
 Pt
 Pt
 Pt
@@ -9438,11 +9706,11 @@ tO
 tO
 tO
 "}
-(68,1,1) = {"
+(69,1,1) = {"
 tO
 tO
 tO
-ou
+SR
 Mj
 Pt
 Pt
@@ -9461,7 +9729,7 @@ Tc
 Tc
 Tx
 AT
-np
+sc
 nP
 iG
 FU
@@ -9486,11 +9754,11 @@ tO
 tO
 tO
 "}
-(69,1,1) = {"
+(70,1,1) = {"
 tO
 tO
 tO
-gE
+ou
 Az
 GF
 CZ
@@ -9534,12 +9802,12 @@ tO
 tO
 tO
 "}
-(70,1,1) = {"
+(71,1,1) = {"
 tO
 tO
 tO
 qy
-qy
+gE
 Az
 Vg
 te
@@ -9582,7 +9850,7 @@ tO
 tO
 tO
 "}
-(71,1,1) = {"
+(72,1,1) = {"
 tO
 tO
 tO
@@ -9630,7 +9898,7 @@ tO
 tO
 tO
 "}
-(72,1,1) = {"
+(73,1,1) = {"
 tO
 tO
 tO
@@ -9678,7 +9946,7 @@ tO
 tO
 tO
 "}
-(73,1,1) = {"
+(74,1,1) = {"
 tO
 tO
 tO
@@ -9710,8 +9978,8 @@ fZ
 ad
 hG
 ad
-TC
-LI
+Yv
+IR
 Uq
 Ti
 fV
@@ -9726,7 +9994,7 @@ tO
 tO
 tO
 "}
-(74,1,1) = {"
+(75,1,1) = {"
 tO
 tO
 tO
@@ -9741,7 +10009,7 @@ LI
 LI
 LI
 WW
-aW
+Lm
 UZ
 ld
 Fs
@@ -9757,7 +10025,7 @@ UR
 Fs
 ld
 WW
-aW
+Lm
 UZ
 LI
 LI
@@ -9774,7 +10042,7 @@ tO
 tO
 tO
 "}
-(75,1,1) = {"
+(76,1,1) = {"
 tO
 tO
 tO
@@ -9792,7 +10060,7 @@ ad
 ad
 dE
 Fs
-Kx
+aA
 XL
 RH
 XL
@@ -9822,7 +10090,7 @@ tO
 tO
 tO
 "}
-(76,1,1) = {"
+(77,1,1) = {"
 tO
 tO
 tO
@@ -9866,11 +10134,11 @@ tO
 tO
 tO
 tO
-tO
+mX
 tO
 tO
 "}
-(77,1,1) = {"
+(78,1,1) = {"
 tO
 tO
 tO
@@ -9914,11 +10182,11 @@ tO
 tO
 tO
 tO
-mX
+tO
 tO
 tO
 "}
-(78,1,1) = {"
+(79,1,1) = {"
 tO
 tO
 tO
@@ -9966,14 +10234,14 @@ tO
 tO
 tO
 "}
-(79,1,1) = {"
+(80,1,1) = {"
 tO
 tO
 tO
 tO
 tO
-SM
-SM
+aW
+aW
 tO
 tO
 tO
@@ -10007,22 +10275,22 @@ iO
 tO
 tO
 tO
-SM
+tO
 tO
 tO
 tO
 tO
 tO
 "}
-(80,1,1) = {"
+(81,1,1) = {"
 tO
 tO
 tO
 tO
-SM
+aW
 ZV
 ZV
-SM
+aW
 tO
 tO
 tO
@@ -10054,60 +10322,12 @@ tO
 iO
 tO
 tO
-SM
-SM
-SM
-SM
-tO
-tO
-tO
-"}
-(81,1,1) = {"
-tO
-tO
-tO
-tO
-SM
-ZV
-ZV
-SM
 tO
 tO
 tO
 tO
 tO
 tO
-tO
-tO
-tO
-tO
-tO
-tO
-tO
-iO
-Ke
-iO
-tO
-tO
-tO
-tO
-tO
-rq
-tO
-tO
-tO
-tO
-tO
-tO
-iO
-tO
-tO
-SM
-SM
-SM
-SM
-SM
-SM
 tO
 "}
 (82,1,1) = {"
@@ -10115,10 +10335,10 @@ tO
 tO
 tO
 tO
-SM
-SM
-SM
-tO
+aW
+ZV
+ZV
+aW
 tO
 tO
 tO
@@ -10151,11 +10371,11 @@ iO
 tO
 tO
 tO
-SM
-ZV
-ZV
-SM
-SM
+tO
+tO
+tO
+tO
+tO
 tO
 "}
 (83,1,1) = {"
@@ -10163,9 +10383,9 @@ tO
 tO
 tO
 tO
-tO
-tO
-tO
+aW
+aW
+aW
 tO
 tO
 tO
@@ -10199,11 +10419,11 @@ iO
 tO
 tO
 tO
-SM
-ZV
-ZV
-SM
-SM
+aW
+tO
+tO
+tO
+tO
 tO
 "}
 (84,1,1) = {"
@@ -10224,8 +10444,8 @@ tO
 tO
 tO
 tO
-SM
-SM
+aW
+aW
 tO
 tO
 iO
@@ -10246,12 +10466,12 @@ tO
 iO
 tO
 tO
+aW
+aW
+aW
+aW
 tO
 tO
-SM
-SM
-SM
-SM
 tO
 "}
 (85,1,1) = {"
@@ -10272,9 +10492,9 @@ tO
 tO
 tO
 CV
-SM
-SM
-SM
+aW
+aW
+aW
 tO
 iO
 Ke
@@ -10294,12 +10514,12 @@ tO
 iO
 tO
 tO
-tO
-tO
-tO
-tO
-tO
-tO
+aW
+aW
+aW
+aW
+aW
+aW
 tO
 "}
 (86,1,1) = {"
@@ -10321,8 +10541,8 @@ Zw
 Zw
 QU
 tO
-SM
-SM
+aW
+aW
 QU
 QU
 CI
@@ -10343,11 +10563,11 @@ iO
 tO
 tO
 tO
-tO
-tO
-tO
-tO
-tO
+aW
+ZV
+AE
+aW
+aW
 tO
 "}
 (87,1,1) = {"
@@ -10391,11 +10611,11 @@ iO
 tO
 tO
 tO
-tO
-tO
-tO
-tO
-tO
+aW
+ZV
+VM
+aW
+aW
 tO
 "}
 (88,1,1) = {"
@@ -10440,10 +10660,10 @@ tO
 tO
 tO
 tO
-tO
-tO
-tO
-tO
+aW
+aW
+aW
+aW
 tO
 "}
 (89,1,1) = {"
@@ -10499,13 +10719,13 @@ tO
 tO
 tO
 tO
-cu
-cu
-cu
-cu
-cu
-cu
-cu
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 tO
 tO
 QU
@@ -10545,16 +10765,16 @@ tO
 (91,1,1) = {"
 tO
 tO
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 tO
 QU
 PY
@@ -10569,7 +10789,7 @@ uv
 Bh
 qa
 Bh
-hC
+GR
 Bh
 Mr
 Bh
@@ -10592,8 +10812,8 @@ tO
 "}
 (92,1,1) = {"
 tO
-cu
-cu
+hl
+hl
 tP
 tP
 tP
@@ -10602,8 +10822,8 @@ tP
 tP
 tP
 tP
-cu
-cu
+hl
+hl
 QU
 JG
 zA
@@ -10640,20 +10860,20 @@ tO
 "}
 (93,1,1) = {"
 tO
-cu
+hl
 tP
 Yq
 oh
-oh
+ME
 sW
 sW
-oh
+ME
 oh
 dc
 tP
-cu
+hl
 QU
-Mu
+Kx
 BI
 TN
 zC
@@ -10688,15 +10908,15 @@ tO
 "}
 (94,1,1) = {"
 tO
-cu
+hl
 tP
 bk
-oh
+rM
 oh
 sW
 sW
 oh
-oh
+ME
 oh
 tP
 BE
@@ -10735,8 +10955,8 @@ tO
 tO
 "}
 (95,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 tP
 tP
@@ -10783,16 +11003,16 @@ tO
 tO
 "}
 (96,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 oh
-oh
+ME
 oh
 Qc
 vZ
 Rj
-oh
+ME
 oh
 xi
 La
@@ -10818,7 +11038,7 @@ zo
 fc
 iY
 rV
-rV
+cJ
 rV
 IZ
 fc
@@ -10831,17 +11051,17 @@ tO
 tO
 "}
 (97,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 oh
 oh
-oh
+ME
 vZ
 Uf
 sW
 oh
-oh
+ME
 xi
 zI
 vP
@@ -10851,9 +11071,9 @@ IH
 iM
 QR
 iM
-fh
+OI
 zg
-QR
+Sl
 iM
 iM
 en
@@ -10879,8 +11099,8 @@ tO
 tO
 "}
 (98,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 tP
 tP
@@ -10901,7 +11121,7 @@ iM
 iM
 iM
 FM
-hS
+ul
 hS
 hS
 xG
@@ -10927,27 +11147,27 @@ tO
 tO
 "}
 (99,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 Rj
 oh
+ME
 oh
 oh
+JQ
 oh
-oh
-oh
-sW
+DQ
 tP
 BE
 BE
-Ae
-BI
+MB
+KK
 TN
 yo
 aB
 aB
-jn
+ik
 IA
 iM
 TN
@@ -10962,7 +11182,7 @@ Oj
 fc
 ys
 rV
-rV
+cJ
 rV
 IZ
 fc
@@ -10975,16 +11195,16 @@ tO
 tO
 "}
 (100,1,1) = {"
-cu
-cu
+hl
+hl
 tP
-sW
+DQ
 oh
 oh
-oh
+ME
 oh
 Rj
-oh
+ME
 sW
 tP
 mK
@@ -11023,19 +11243,19 @@ tO
 tO
 "}
 (101,1,1) = {"
-cu
+hl
 hl
 tP
 Yz
 oh
 vZ
 Rj
-oh
+ME
 sW
 oh
-sW
+DQ
 tP
-SM
+aW
 QU
 Ie
 SA
@@ -11071,15 +11291,15 @@ tO
 tO
 "}
 (102,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 sW
 Rj
-oh
-oh
+ME
+ME
 xe
-xe
+NF
 Rj
 xo
 tP
@@ -11093,7 +11313,7 @@ ab
 aB
 aB
 SF
-iM
+LW
 TN
 uV
 Hi
@@ -11101,8 +11321,8 @@ ss
 ah
 YO
 TN
-Qw
-ZC
+HL
+qf
 fc
 tK
 Jh
@@ -11119,17 +11339,17 @@ tO
 tO
 "}
 (103,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 sW
 bk
-sW
+DQ
 xe
 nB
 vZ
 Yz
-sW
+DQ
 tP
 Hl
 QU
@@ -11167,8 +11387,8 @@ tO
 tO
 "}
 (104,1,1) = {"
-cu
-cu
+hl
+hl
 tP
 Rj
 BV
@@ -11177,24 +11397,24 @@ KN
 KN
 xe
 sW
-sW
+DQ
 tP
-SM
+aW
 QU
 Oj
 VK
 mD
-ZC
+QD
 Oj
 KO
 Oj
 ZC
 Oj
-ZC
+QD
 ih
 ZC
 Oj
-ZC
+qf
 Oj
 Hg
 Fo
@@ -11215,7 +11435,7 @@ tO
 tO
 "}
 (105,1,1) = {"
-cu
+hl
 hl
 tP
 tP
@@ -11227,7 +11447,7 @@ tP
 tP
 tP
 tP
-SM
+aW
 QU
 ey
 ZC
@@ -11238,11 +11458,11 @@ KO
 Lj
 ZC
 Oj
-ZC
+QD
 iz
 ZC
 Oj
-jE
+fr
 Lj
 kC
 as
@@ -11264,7 +11484,7 @@ tO
 "}
 (106,1,1) = {"
 tO
-cu
+hl
 tP
 hm
 Av
@@ -11312,8 +11532,8 @@ tO
 "}
 (107,1,1) = {"
 tO
-cu
-cu
+hl
+hl
 tP
 QY
 tP
@@ -11322,7 +11542,7 @@ tP
 QY
 tP
 tP
-cu
+hl
 QU
 DI
 EW
@@ -11340,8 +11560,8 @@ Er
 MQ
 CL
 QU
-EW
-iU
+wt
+OB
 EW
 QU
 OL
@@ -11360,17 +11580,17 @@ tO
 "}
 (108,1,1) = {"
 tO
-cu
-cu
-cu
+hl
+hl
+hl
 LQ
 tP
 LQ
 tP
 LQ
 tP
-cu
-cu
+hl
+hl
 QU
 EW
 DV
@@ -11382,7 +11602,7 @@ zI
 zI
 zI
 iU
-EW
+cu
 zI
 Er
 IS
@@ -11409,15 +11629,15 @@ tO
 (109,1,1) = {"
 tO
 tO
-cu
-cu
+hl
+hl
 tO
 tO
 tO
 tO
 tO
-cu
-cu
+hl
+hl
 tO
 QU
 Lx

@@ -66,7 +66,7 @@
 /datum/outfit/oldstation/medic
 	name = "Old station medic"
 	uniform = /obj/item/clothing/under/utility
-	shoes = /obj/item/clothing/shoes/sneakers
+	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = /obj/item/card/id/elysium
 	l_pocket = /obj/item/stack/medical/ointment
 	r_pocket = /obj/item/stack/medical/ointment
@@ -82,10 +82,19 @@
 /datum/outfit/oldstation/scientist
 	name = "Old station scientist"
 	uniform = /obj/item/clothing/under/utility
-	shoes = /obj/item/clothing/shoes/sneakers
+	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = /obj/item/card/id/elysium
 	l_pocket = /obj/item/stack/medical/bruise_pack
 
 /obj/effect/mob_spawn/human/oldstation/Destroy()
 	new /obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
+
+/obj/effect/mob_spawn/human/oldstation/special(mob/living/new_spawn)
+	new_spawn.fully_replace_character_name(null,random_unique_name(gender))
+
+/obj/effect/mob_spawn/human/oldstation/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(A)
+		notify_ghosts("Обнаружен сигнал старой криогенной капсулы \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)

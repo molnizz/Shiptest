@@ -166,12 +166,15 @@
 			continue
 		var/list/ship_data = list(
 			"name" = T.name,
-			"faction" = ship_prefix_to_faction(T.prefix),
+			"faction" = T.faction_name,
 			"desc" = T.description,
 			"tags" = T.tags,
 			"crewCount" = length(T.job_slots),
 			"limit" = T.limit,
 			"curNum" = template_num_lookup[T] || 0,
 			"minTime" = T.get_req_spawn_minutes(),
+			// [CELADON-ADD] - mod_celadon/qol - Берём значение из конфига корабликов.
+			"shortName" = T.short_name,
+			// [/CELADON-ADD]
 		)
 		.["templates"] += list(ship_data)

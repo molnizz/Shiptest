@@ -12,10 +12,10 @@
 #define DEFAULT_HEAD_PATH 'icons/mob/clothing/head.dmi'
 // [CELADON-EDIT] - CELADON_QOL - В будущем сделать модульно в code/__defines/~mod_celadon/_master_defines.dm
 // #define DEFAULT_NECK_PATH 'icons/mob/clothing/neck.dmi'	// CELADON-EDIT - ORIGINAL
-#define DEFAULT_NECK_PATH 'mod_celadon/_storge_icons/icons/qol/neck.dmi'
+#define DEFAULT_NECK_PATH 'mod_celadon/_storge_icons/icons/items/overlay/neck.dmi'
 // [/CELADON-EDIT]
 #define DEFAULT_GLOVES_PATH 'icons/mob/clothing/hands.dmi'
-#define DEFAULT_GLASSES_PATH 'icons/mob/clothing/eyes.dmi'
+#define DEFAULT_GLASSES_PATH 'icons/mob/clothing/eyes/eyes.dmi'
 #define DEFAULT_BELT_PATH 'icons/mob/clothing/belt.dmi'
 
 ///VOX PATHS
@@ -33,6 +33,7 @@
 
 ///KEPORI PATHS
 #define KEPORI_UNIFORM_PATH 'icons/mob/species/kepori/onmob_uniform_kepori.dmi'
+#define KEPORI_BACK_PATH 'icons/mob/species/kepori/onmob_back_kepori.dmi'
 #define KEPORI_SHOES_PATH 'icons/mob/species/kepori/onmob_feet_kepori.dmi'
 #define KEPORI_SUIT_PATH 'icons/mob/species/kepori/onmob_suit_kepori.dmi'
 #define KEPORI_EARS_PATH 'icons/mob/species/kepori/onmob_ears_kepori.dmi'

@@ -150,8 +150,8 @@ There are several things that need to be remembered:
 			else if(dna.species.bodytype & BODYTYPE_KEPORI)
 				if(U.supports_variations & KEPORI_VARIATION)
 					icon_file = KEPORI_UNIFORM_PATH
-					if(U.kepoi_override_icon)
-						icon_file = U.kepoi_override_icon
+					if(U.kepori_override_icon)
+						icon_file = U.kepori_override_icon
 				else
 					handled_by_bodytype = TRUE
 
@@ -243,8 +243,8 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_GLOVES_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
@@ -295,8 +295,8 @@ There are several things that need to be remembered:
 			else if(dna.species.bodytype & BODYTYPE_KEPORI)
 				if(I.supports_variations & KEPORI_VARIATION)
 					icon_file = KEPORI_GLASSES_PATH
-					if(I.kepoi_override_icon)
-						icon_file = I.kepoi_override_icon
+					if(I.kepori_override_icon)
+						icon_file = I.kepori_override_icon
 				else
 					handled_by_bodytype = TRUE
 
@@ -346,8 +346,8 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_EARS_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
@@ -407,8 +407,8 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_SHOES_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
@@ -518,14 +518,17 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_HEAD_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
-			icon_file = TAJARA_HEAD_PATH
+		else if(dna.species.bodytype & BODYTYPE_TAJARA)
+			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = SARATHI_SNOUTED_HELM_PATH
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -573,8 +576,8 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_BELT_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
@@ -631,14 +634,17 @@ There are several things that need to be remembered:
 		else if(dna.species.bodytype & BODYTYPE_KEPORI)
 			if(I.supports_variations & KEPORI_VARIATION)
 				icon_file = KEPORI_SUIT_PATH
-				if(I.kepoi_override_icon)
-					icon_file = I.kepoi_override_icon
+				if(I.kepori_override_icon)
+					icon_file = I.kepori_override_icon
 			else
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-			icon_file = TAJARA_SUIT_PATH
+		else if(dna.species.bodytype & BODYTYPE_TAJARA)
+			if(icon_exists(TAJARA_SUIT_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = TAJARA_SUIT_PATH
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -729,14 +735,17 @@ There are several things that need to be remembered:
 			else if(dna.species.bodytype & BODYTYPE_KEPORI)
 				if(I.supports_variations & KEPORI_VARIATION)
 					icon_file = KEPORI_MASK_PATH
-					if(I.kepoi_override_icon)
-						icon_file = I.kepoi_override_icon
+					if(I.kepori_override_icon)
+						icon_file = I.kepori_override_icon
 				else
 					handled_by_bodytype = TRUE
 
 			// [CELADON-ADD] - TAJARA
-			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-				icon_file = TAJARA_MASK_PATH
+			else if(dna.species.bodytype & BODYTYPE_TAJARA)
+				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
+					icon_file = SARATHI_SNOUTED_MASK_PATH
+				else
+					handled_by_bodytype = TRUE
 			// [/CELADON-ADD]
 
 
@@ -776,6 +785,7 @@ There are several things that need to be remembered:
 
 
 		update_hud_neck(I)
+
 		if(!(ITEM_SLOT_NECK in check_obscured_slots()))
 
 			if(dna.species.bodytype & BODYTYPE_VOX) // there is no kepori neck path, we just tell it to greyscale no matter what
@@ -835,10 +845,12 @@ There are several things that need to be remembered:
 					handled_by_bodytype = TRUE
 
 			else if(dna.species.bodytype & BODYTYPE_KEPORI)
-//				if(I.supports_variations & KEPORI_VARIATION)
-//					icon_file = KEPORI_BACK_PATH
-//				else
-				handled_by_bodytype = TRUE
+				if(I.supports_variations & KEPORI_VARIATION)
+					icon_file = KEPORI_BACK_PATH
+					if(I.kepori_override_icon)
+						icon_file = I.kepori_override_icon
+				else
+					handled_by_bodytype = TRUE
 
 			if(!icon_exists(icon_file, RESOLVE_ICON_STATE(I)))
 				icon_file = I.mob_overlay_icon ? I.mob_overlay_icon : DEFAULT_BACK_PATH
